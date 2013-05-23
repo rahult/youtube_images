@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["rahul.trikha@gmail.com"]
   spec.description   = %q{Extract thumbnails/image for a given youtube video ID or URL without a developer ID. It uses a URL constructor instead of an API}
   spec.summary       = %q{Extract thumbnails for a given youtube video ID or URL without a developer ID}
-  spec.homepage      = "http://github.com/rahult/youtube_images"
+  spec.homepage      = "http://rahult.github.io/youtube_images/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
