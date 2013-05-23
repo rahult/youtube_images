@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Youtube images by rahult</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Youtube images</h1>
+        <p>Extract thumbnails/images for a given youtube video ID or a URL without an API</p>
+        <p class="view"><a href="https://github.com/rahult/youtube_images">View the Project on GitHub <small>rahult/youtube_images</small></a></p>
+        <ul>
+          <li><a href="https://github.com/rahult/youtube_images/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rahult/youtube_images/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rahult/youtube_images">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Getting Started</h1>
+
+<p><strong>YouTube Images</strong> can be used to extract thumbnails/images for a given youtube video ID or URL without a developer ID. It uses a URL constructor instead of an API</p>
+
+<h2>Requirement</h2>
+
+<p>Ruby 1.9 or greater</p>
+
+<h2>Installation</h2>
+
+<p>YouTube Images is released as a Ruby Gem. The gem is to be installed within a Ruby
+or Rails application. To install, simply add the following to your Gemfile:</p>
+
+<div class="highlight"><pre><span class="c1"># Gemfile</span>
+<span class="n">gem</span> <span class="s1">'youtube_images'</span>
+</pre></div>
+
+<p>After updating your bundle, you can use YouTubeImages::For("video-id") function within your ruby code</p>
+
+<h2>Usage</h2>
+
+<p>For example if you want to fetch the default thumbnail for youtube URL you can do something like this</p>
+
+<div class="highlight"><pre><span class="ss">YouTubeImages</span><span class="p">:</span><span class="ss">:For</span><span class="p">(</span><span class="s2">"http://www.youtube.com/watch?v=5zVaFjSxAZs"</span><span class="p">)</span><span class="o">[</span><span class="ss">:default</span><span class="o">]</span>
+</pre></div>
+
+<h2>Advanced Usage</h2>
+
+<div class="highlight"><pre><span class="ss">YouTubeImages</span><span class="p">:</span><span class="ss">:For</span><span class="p">(</span><span class="s2">"http://www.youtube.com/watch?v=5zVaFjSxAZs"</span><span class="p">)</span>
+</pre></div>
+
+<p>will return a hash for default, medium, high and maximum dimension images</p>
+
+<p>So to access different dimension images you can do something like this</p>
+
+<div class="highlight"><pre><span class="ss">YouTubeImages</span><span class="p">:</span><span class="ss">:For</span><span class="p">(</span><span class="s2">"http://www.youtube.com/watch?v=5zVaFjSxAZs"</span><span class="p">)</span><span class="o">[</span><span class="ss">:medium</span><span class="o">]</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="ss">YouTubeImages</span><span class="p">:</span><span class="ss">:For</span><span class="p">(</span><span class="s2">"http://www.youtube.com/watch?v=5zVaFjSxAZs"</span><span class="p">)</span><span class="o">[</span><span class="ss">:high</span><span class="o">]</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="ss">YouTubeImages</span><span class="p">:</span><span class="ss">:For</span><span class="p">(</span><span class="s2">"http://www.youtube.com/watch?v=5zVaFjSxAZs"</span><span class="p">)</span><span class="o">[</span><span class="ss">:maximum</span><span class="o">]</span>
+</pre></div>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/rahult">rahult</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-30563163-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
