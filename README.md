@@ -23,13 +23,13 @@ After updating your bundle, you can use YouTubeImages::For("video-id") function 
 For example if you want to fetch the default thumbnail for youtube URL you can do something like this
 
 ```ruby
-  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:default]
+YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:default]
 ```
 
 ## Advanced Usage
 
 ```ruby
-  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")
+YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")
 ```
 
 will return a hash for default, medium, high and maximum dimension images
@@ -37,13 +37,13 @@ will return a hash for default, medium, high and maximum dimension images
 So to access different dimension images you can do something like this
 
 ```ruby
-  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:medium]
+YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:medium]
 ```
 
 ```ruby
-  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:high]
+YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:high]
 ```
 
 ```ruby
-  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:maximum]
+YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:maximum]
 ```
