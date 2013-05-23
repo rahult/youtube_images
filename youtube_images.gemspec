@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = YoutubeImages::VERSION
   spec.authors       = ["Rahul Trikha"]
   spec.email         = ["rahul.trikha@gmail.com"]
-  spec.description   = %q{Extract thumbnails for a given youtube video ID or URL}
-  spec.summary       = %q{Extract thumbnails for a given youtube video ID or URL}
+  spec.description   = %q{Extract thumbnails/image for a given youtube video ID or URL without a developer ID. It uses a URL constructor instead of an API}
+  spec.summary       = %q{Extract thumbnails for a given youtube video ID or URL without a developer ID}
   spec.homepage      = "http://github.com/rahult/youtube_images"
   spec.license       = "MIT"
 
@@ -19,6 +19,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "minitest"
   spec.add_development_dependency "rake"
 end

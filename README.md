@@ -1,29 +1,49 @@
-# YoutubeImages
+# Getting Started
 
-TODO: Write a gem description
+**YouTube Images** can be used to extract thumbnails/images for a given youtube video ID or URL without a developer ID. It uses a URL constructor instead of an API
+
+## Requirement
+
+Ruby 1.9 or greater
 
 ## Installation
 
-Add this line to your application's Gemfile:
+YouTube Images is released as a Ruby Gem. The gem is to be installed within a Ruby
+or Rails application. To install, simply add the following to your Gemfile:
 
-    gem 'youtube_images'
+```ruby
+# Gemfile
+gem 'youtube_images'
+```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install youtube_images
+After updating your bundle, you can use YouTubeImages::For("video-id") function within your ruby code
 
 ## Usage
 
-TODO: Write usage instructions here
+For example if you want to fetch the default thumbnail for youtube URL you can do something like this
 
-## Contributing
+```ruby
+  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:default]
+```
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+## Advanced Usage
+
+```ruby
+  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")
+```
+
+will return a hash for default, medium, high and maximum dimension images
+
+So to access different dimension images you can do something like this
+
+```ruby
+  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:medium]
+```
+
+```ruby
+  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:high]
+```
+
+```ruby
+  YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:maximum]
+```
