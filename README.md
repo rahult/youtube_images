@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started [![Build Status](https://travis-ci.org/rahult/youtube_images.png?branch=master)](https://travis-ci.org/rahult/youtube_images)
 
 **YouTube Images** can be used to extract thumbnails/images for a given youtube video ID or URL without a developer ID. It uses a URL constructor instead of an API
 
