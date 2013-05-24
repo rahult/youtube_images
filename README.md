@@ -24,6 +24,8 @@ For example if you want to fetch the default thumbnail for youtube URL you can d
 
 ```ruby
 YouTubeImages::For("http://www.youtube.com/watch?v=5zVaFjSxAZs")[:default]
+# or
+YouTubeImages::For("5zVaFjSxAZs")[:default]
 ```
 
 ## Advanced Usage
