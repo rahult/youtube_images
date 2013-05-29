@@ -5,7 +5,7 @@ module YouTubeImages
   class IncorrectYouTubeID < Exception; end
 
   def self.For(id_or_url, secure=false)
-    id = id_or_url[/[\w]+$/]
+    id = id_or_url[/[\w\-\_]+$/]
 
     raise IncorrectYouTubeID if id.nil? || (id.length < 11)
 

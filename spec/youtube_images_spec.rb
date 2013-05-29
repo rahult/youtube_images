@@ -2,16 +2,17 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require "youtube_images"
 
-describe YouTubeImages do
+def image_hash_for(id)
+  @images_hash =  {
+    default: "http://img.youtube.com/vi/#{id}/default.jpg",
+    medium:  "http://img.youtube.com/vi/#{id}/hqdefault.jpg",
+    high:    "http://img.youtube.com/vi/#{id}/mqdefault.jpg",
+    maximum: "http://img.youtube.com/vi/#{id}/maxresdefault.jpg"
+  }
+end
 
-  before do
-    @images_hash =  {
-      default: "http://img.youtube.com/vi/onghF8NYbPw/default.jpg",
-      medium:  "http://img.youtube.com/vi/onghF8NYbPw/hqdefault.jpg",
-      high:    "http://img.youtube.com/vi/onghF8NYbPw/mqdefault.jpg",
-      maximum: "http://img.youtube.com/vi/onghF8NYbPw/maxresdefault.jpg"
-    }
-  end
+
+describe YouTubeImages do
 
   describe "when asked about images for a invalid youtube video" do
 
@@ -28,7 +29,11 @@ describe YouTubeImages do
   describe "when asked about images for a youtube ID" do
 
     it "must respond with an image" do
-      YouTubeImages::For("onghF8NYbPw").must_equal @images_hash
+      YouTubeImages::For("onghF8NYbPw").must_equal image_hash_for("onghF8NYbPw")
+    end
+
+    it "must respond with an image" do
+      YouTubeImages::For("wrHU-DSirsw").must_equal image_hash_for("wrHU-DSirsw")
     end
 
   end
@@ -36,7 +41,7 @@ describe YouTubeImages do
   describe "when asked about images for a youtube URL" do
 
     it "must respond with an image" do
-      YouTubeImages::For("http://www.youtube.com/watch?v=onghF8NYbPw").must_equal @images_hash
+      YouTubeImages::For("http://www.youtube.com/watch?v=onghF8NYbPw").must_equal image_hash_for("onghF8NYbPw")
     end
 
   end
