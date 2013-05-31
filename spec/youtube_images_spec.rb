@@ -1,6 +1,8 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require "youtube_images"
+require 'coveralls'
+Coveralls.wear!
 
 def image_hash_for(id)
   @images_hash =  {
