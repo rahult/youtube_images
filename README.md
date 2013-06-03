@@ -1,4 +1,4 @@
-# Getting Started [![Build Status](https://travis-ci.org/rahult/youtube_images.png?branch=master)](https://travis-ci.org/rahult/youtube_images) [![Code Climate](https://codeclimate.com/github/rahult/youtube_images.png)](https://codeclimate.com/github/rahult/youtube_images)
+# Getting Started [![Build Status](https://travis-ci.org/rahult/youtube_images.png?branch=master)](https://travis-ci.org/rahult/youtube_images) [![Code Climate](https://codeclimate.com/github/rahult/youtube_images.png)](https://codeclimate.com/github/rahult/youtube_images) [![Dependency Status](https://gemnasium.com/rahult/youtube_images.png)](https://gemnasium.com/rahult/youtube_images) [![Gem Version](https://badge.fury.io/rb/youtube_images.png)](http://badge.fury.io/rb/youtube_images)
 
 **YouTube Images** can be used to extract thumbnails/images for a given youtube video ID or URL without a developer ID. It uses a URL constructor instead of an API
 
